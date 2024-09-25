@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Meta information -->
-  <meta name="author" content="Danny Sungsoo Kim, MD, PhD">
-  <meta name="co-authors (alphabetical order)" content="Daniel Cole, MD, Jonathan Ho, MD, Matt Fischer, MD, MS, 
+  <meta name="Principal investigator (PI):" content="Danny Sungsoo Kim, MD, PhD">
+  <meta name="Contributors (alphabetical order)" content="Daniel Cole, MD, Jonathan Ho, MD, Matt Fischer, MD, MS, 
     Maxime Cannesson, MD, PhD, Sohee Kwon, MD, MPH">  
   <meta name="description" content="Machine Learning Models for Predicting New-Onset Atrial Fibrillation 
     Following Coronary Artery Bypass Grafting (CABG).">
@@ -82,13 +82,13 @@
       <h2>Demographic</h2>
       <div class="question">
         <label>Gender: Male?</label><br>
-        <input type="radio" name="Male" value="yes"> Yes
+        <input type="radio" name="Male" value="yes" checked> Yes
         <input type="radio" name="Male" value="no"> No
       </div>
   
       <div class="question">
         <label>Age (years old) at CABG?</label><br>
-        <input type="radio" id="18_≤_Age_<_65" name="18_≤_Age_<_65" value="0"> 
+        <input type="radio" id="18_≤_Age_<_65" name="18_≤_Age_<_65" value="0" checked> 
         <label for="18_≤_Age_<_65">18 ≤ Age < 65 (0 points)</label><br>
   
         <input type="radio" id="65_≤_Age_<_75" name="65_≤_Age_<_75" value="1"> 
@@ -105,25 +105,25 @@
       
       <div class="question">
         <label>Past Medical History: Congestive heart failure (EF ≤ 40%)?</label><br>
-        <input type="radio" name="Congestive_heart_failure" value="yes"> Yes
+        <input type="radio" name="Congestive_heart_failure" value="yes" checked> Yes
         <input type="radio" name="Congestive_heart_failure" value="no"> No
       </div>
       
       <div class="question">
         <label>Past Medical History: dyslipidemia?</label><br>
-        <input type="radio" name="dysplipidemia" value="yes"> Yes
+        <input type="radio" name="dysplipidemia" value="yes" checked> Yes
         <input type="radio" name="dysplipidemia" value="no"> No
       </div>
   
       <div class="question">
         <label>Past Medical History: hypertension?</label><br>
-        <input type="radio" name="hypertension" value="yes"> Yes
+        <input type="radio" name="hypertension" value="yes" checked> Yes
         <input type="radio" name="hypertension" value="no"> No
       </div>
   
       <div class="question">
         <label>Past Medical History: valvular heart disease?</label><br>
-        <input type="radio" name="valvular_heart_disease" value="yes"> Yes
+        <input type="radio" name="valvular_heart_disease" value="yes" checked> Yes
         <input type="radio" name="valvular_heart_disease" value="no"> No
       </div>    
       
@@ -134,14 +134,14 @@
       <h2>Echo</h2>
       <div class="question">
         <label>Echo (TTE or TEE): atrial dilation? (LA volume > 50 cm<sup>3</sup>)?</label><br>
-        <input type="radio" name="atrial_dilation" value="yes"> Yes
+        <input type="radio" name="atrial_dilation" value="yes" checked> Yes
         <input type="radio" name="atrial_dilation" value="no"> No
         <input type="radio" name="atrial_dilation" value="unknown"> unknown
       </div>    
   
       <div class="question">
         <label>Echo (TTE or TEE): atrial hypertrophy?</label><br>
-        <input type="radio" name="atrial_hypertrophy" value="yes"> Yes
+        <input type="radio" name="atrial_hypertrophy" value="yes" checked> Yes
         <input type="radio" name="atrial_hypertrophy" value="no"> No
         <input type="radio" name="atrial_hypertrophy" value="unknown"> unknown
       </div>    
@@ -153,21 +153,21 @@
   
       <div class="question">
         <label>Physiology: tachycardia (heart rate > 100)?</label><br>
-        <input type="radio" name="tachycardia" value="yes"> Yes
+        <input type="radio" name="tachycardia" value="yes" checked> Yes
         <input type="radio" name="tachycardia" value="no"> No
         <input type="radio" name="tachycardia" value="unknown"> unknown
       </div>    
   
       <div class="question">
         <label>Physiology: Heart rate variability?</label><br>
-        <input type="radio" name="Heart_rate_variability" value="yes"> Yes
+        <input type="radio" name="Heart_rate_variability" value="yes" checked> Yes
         <input type="radio" name="Heart_rate_variability" value="no"> No
         <input type="radio" name="Heart_rate_variability" value="unknown"> unknown
       </div>    
   
       <div class="question">
         <label>Physiology: Fever? (>100.4°F or >38°C) </label><br>
-        <input type="radio" name="Fever" value="yes"> Yes
+        <input type="radio" name="Fever" value="yes" checked> Yes
         <input type="radio" name="Fever" value="no"> No
         <input type="radio" name="Fever" value="unknown"> unknown
       </div>    
