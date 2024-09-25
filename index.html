@@ -10,7 +10,6 @@
     Maxime Cannesson, MD, PhD, Sohee Kwon, MD, MPH">  
   <meta name="description" content="Machine Learning Models for Predicting New-Onset Atrial Fibrillation 
     Following Coronary Artery Bypass Grafting (CABG).">
-  <meta name="date" content="2024-09-25" scheme="YYYY-MM-DD">
   
   <title>New-Onset Atrial Fibrillation after CABG</title>
   <style>
@@ -74,7 +73,7 @@
       <p><strong>Principal investigator (PI):</strong> Danny Sungsoo Kim, MD, PhD (sungsoomd@gmail.com)</p>
       <p><strong>Contributors :</strong> (alphabetical order) Daniel Cole, MD, Jonathan Ho, MD, 
         Matt Fischer, MD, MS, Maxime Cannesson, MD, PhD</p>
-      <p><strong>Date:</strong> September 25, 2024</p>
+      <p><strong>Date:</strong> <span id="currentDate"></span></p>
     </div>
     
     <!-- Demographic Section -->
@@ -203,6 +202,18 @@
       } else {
         alert('Risk calculation function not found in script.js.');
       }
+
+   // Function to update the date
+    function updateDate() {
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = today.toLocaleDateString('en-US', options);
+        document.getElementById('currentDate').textContent = formattedDate;
+    }
+
+    // Call the function to update the date on page load
+    window.onload = updateDate;
+      
     }
   </script>
 
