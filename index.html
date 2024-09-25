@@ -94,10 +94,10 @@
       </div>    
       
     </div>
-  
-    <!-- Physiology Section -->
-    <div class="section physiology">
-      <h2>Physiology</h2>
+
+    <!-- Echo Section -->
+    <div class="section echo">
+      <h2>Echo</h2>
       <div class="question">
         <label>Echo (TTE or TEE): atrial dilation? (LA volume > 50 cm<sup>3</sup>)?</label><br>
         <input type="radio" name="atrial_dilation" value="yes"> Yes
@@ -111,6 +111,11 @@
         <input type="radio" name="atrial_hypertrophy" value="no"> No
         <input type="radio" name="atrial_hypertrophy" value="unknown"> unknown
       </div>    
+    </div>
+    
+    <!-- Physiology Section -->
+    <div class="section physiology">
+      <h2>Physiology</h2>
   
       <div class="question">
         <label>Physiology: tachycardia (heart rate > 100)?</label><br>
@@ -132,8 +137,14 @@
         <input type="radio" name="Fever" value="no"> No
         <input type="radio" name="Fever" value="unknown"> unknown
       </div>    
-      
     </div>
+
+    <!-- Result Section -->
+    <div class="section result">
+      <h2>Result</h2>
+      <p>After completing the questionnaire, your results will be shown here.</p>
+    </div>
+   
  </form>
 
 
@@ -235,7 +246,13 @@
       <input type="radio" name="Fever" value="no"> No
       <input type="radio" name="Fever" value="unknown"> unknown
     </div>    
-        
+
+   <!-- Result Section -->
+    <div class="section result">
+      <h2>Result</h2>
+      <p>After completing the questionnaire, your results will be shown here.</p>
+    </div>
+    
     <button type="button" onclick="calculateRisk()">Calculate Risk</button>
   </form>
 
