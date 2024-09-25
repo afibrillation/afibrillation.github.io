@@ -88,15 +88,15 @@ function runRiskCalculation() {
 
     // Rationale based on risk score
     if (riskScore <= 3) {
-        resultsText += "Danny: low risk for new-onset atrial fibrillation!\n";
+        resultsText += "Low risk for new-onset atrial fibrillation!\n";
         resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
         resultsText += "However, Danny is very busy so please give more time for debugging :-) \n";
     } else if (riskScore <= 6) {
-        resultsText += "Danny: Moderate risk for new-onset atrial fibrillation!\n";
+        resultsText += "Moderate risk for new-onset atrial fibrillation!\n";
         resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
         resultsText += "However, Danny is very busy so please give more time for debugging :-) \n";
     } else {
-        resultsText += "Danny: High risk for new-onset atrial fibrillation!\n";
+        resultsText += "High risk for new-onset atrial fibrillation!\n";
         resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
         resultsText += "However, Danny is very busy so please give more time for debugging :-) \n";
     }
