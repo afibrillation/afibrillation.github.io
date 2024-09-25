@@ -61,9 +61,7 @@ function calculateRisk() {
     // Display the result based on score
     let riskMessage;
     if (score >= 8) {
-        riskMessage = "High risk of New-Onset Atrial Fibrillation. 
-            Call (with pressure) Danny to build more intensive debugging! We need more rationale for this decision, dose of amiodarone, 
-                route of amiodarone and initiating (end) time";
+        riskMessage = "High risk of New-Onset Atrial Fibrillation. Call (with pressure) Danny to build more intensive debugging! We need more rationale for this decision, dose of amiodarone, route of amiodarone and initiating (end) time";
     } else if (score >= 2) {
         riskMessage = "Moderate risk of New-Onset Atrial Fibrillation. 
             Call (with pressure) Danny to build more intensive debugging!
