@@ -47,11 +47,11 @@ function runRiskCalculation() {
 
     // Rationale based on risk score
     if (riskScore <= 3) {
-        resultsText += " Low risk for new-onset atrial fibrillation.";
+        resultsText += "Danny: Low risk for new-onset atrial fibrillation.";
     } else if (riskScore <= 6) {
-        resultsText += " Moderate risk for new-onset atrial fibrillation.";
+        resultsText += "Danny: Moderate risk for new-onset atrial fibrillation.";
     } else {
-        resultsText += " High risk for new-onset atrial fibrillation.";
+        resultsText += "Danny: High risk for new-onset atrial fibrillation.";
     }
 
     // Display results
