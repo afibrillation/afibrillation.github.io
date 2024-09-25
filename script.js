@@ -88,7 +88,8 @@ function runRiskCalculation() {
 
     // Rationale based on risk score
     if (riskScore <= 3) {
-        resultsText += "Danny: Low risk for new-onset atrial fibrillation!";
+        resultsText += "Danny: Low risk for new-onset atrial fibrillation!
+             test it works well";
     } else if (riskScore <= 6) {
         resultsText += "Danny: Moderate risk for new-onset atrial fibrillation!";
     } else {
