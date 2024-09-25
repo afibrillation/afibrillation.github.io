@@ -186,16 +186,16 @@
   
   <script>
     // Function to allow de-selection of radio buttons
-    document.querySelectorAll('input[type="radio"]').forEach((radio) => {
-      radio.addEventListener('click', function () {
-        // Check if the clicked radio button is already checked
-        if (this.previousChecked && this.previousChecked === this) {
-          this.checked = false; // De-select if clicked again
-        } else {
-          this.previousChecked = this; // Store the currently checked radio
-        }
-      });
-    });
+    // document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+    //   radio.addEventListener('click', function () {
+    //     // Check if the clicked radio button is already checked
+    //     if (this.previousChecked && this.previousChecked === this) {
+    //       this.checked = false; // De-select if clicked again
+    //     } else {
+    //       this.previousChecked = this; // Store the currently checked radio
+    //     }
+    //   });
+    // });
     
     function calculateRisk() {
       // Call the function defined in script.js
