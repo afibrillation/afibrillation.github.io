@@ -33,67 +33,102 @@
 </head>
 <body>
 
-  <h1>New-Onset Atrial Fibrillation Risk Calculator after CABG</h1>
-
-  <!-- Demographic Section -->
-  <div class="section demographic">
-    <h2>Demographic</h2>
-
-    <div class="question">
-      <label>Gender: Male?</label><br>
-      <input type="radio" name="Male" value="yes"> Yes
-      <input type="radio" name="Male" value="no"> No
+  <form id="risk-time-form">   
+    <h1>New-Onset Atrial Fibrillation Risk Calculator after CABG</h1>
+  
+    <!-- Demographic Section -->
+    <div class="section demographic">
+      <h2>Demographic</h2>
+  
+      <div class="question">
+        <label>Gender: Male?</label><br>
+        <input type="radio" name="Male" value="yes"> Yes
+        <input type="radio" name="Male" value="no"> No
+      </div>
+  
+      <div class="question">
+        <label>Age (years old) at CABG?</label><br>
+        <input type="radio" id="18_≤_Age_<_65" name="18_≤_Age_<_65" value="18 ≤ Age < 65"> 0
+        <label for="18_≤_Age_<_65">0</label><br>
+  
+        <input type="radio" id="65_≤_Age_<_75" name="65_≤_Age_<_75" value="65 ≤ Age < 75"> 1
+        <label for="65_≤_Age_<_75">1</label><br>
+  
+        <input type="radio" id="75 ≤ Age" name="75_≤_Age" value= "75 ≤ Age"> 2
+        <label for="75_≤_Age">2</label><br>
+      </div>
     </div>
-
-    <div class="question">
-      <label>Age (years old) at CABG?</label><br>
-      <input type="radio" id="18_≤_Age_<_65" name="18_≤_Age_<_65" value="18 ≤ Age < 65"> 0
-      <label for="18_≤_Age_<_65">0</label><br>
-
-      <input type="radio" id="65_≤_Age_<_75" name="65_≤_Age_<_75" value="65 ≤ Age < 75"> 1
-      <label for="65_≤_Age_<_75">1</label><br>
-
-      <input type="radio" id="75 ≤ Age" name="75_≤_Age" value= "75 ≤ Age"> 2
-      <label for="75_≤_Age">2</label><br>
+  
+    <!-- Past Medical History Section -->
+    <div class="section medical-history">
+      <h2>Past Medical History</h2>
+      
+      <div class="question">
+        <label>Past Medical History: Congestive heart failure (EF ≤ 40%)?</label><br>
+        <input type="radio" name="Congestive_heart_failure" value="yes"> Yes
+        <input type="radio" name="Congestive_heart_failure" value="no"> No
+      </div>
+      
+      <div class="question">
+        <label>Past Medical History: dysplipidemia?</label><br>
+        <input type="radio" name="dysplipidemia" value="yes"> Yes
+        <input type="radio" name="dysplipidemia" value="no"> No
+      </div>
+  
+      <div class="question">
+        <label>Past Medical History: hypertension?</label><br>
+        <input type="radio" name="hypertension" value="yes"> Yes
+        <input type="radio" name="hypertension" value="no"> No
+      </div>
+  
+      <div class="question">
+        <label>Past Medical History: valvular heart disease?</label><br>
+        <input type="radio" name="valvular_heart_disease" value="yes"> Yes
+        <input type="radio" name="valvular_heart_disease" value="no"> No
+      </div>    
+      
     </div>
-  </div>
-
-  <!-- Past Medical History Section -->
-  <div class="section medical-history">
-    <h2>Past Medical History</h2>
-    <div class="question">
-      <label>Do you have a history of diabetes?</label><br>
-      <input type="radio" id="diabetes-yes" name="diabetes" value="yes">
-      <label for="diabetes-yes">Yes</label><br>
-      <input type="radio" id="diabetes-no" name="diabetes" value="no">
-      <label for="diabetes-no">No</label><br>
-      <input type="radio" id="diabetes-unknown" name="diabetes" value="unknown">
-      <label for="diabetes-unknown">Unknown</label>
+  
+    <!-- Physiology Section -->
+    <div class="section physiology">
+      <h2>Physiology</h2>
+      <div class="question">
+        <label>Echo (TTE or TEE): atrial dilation? (LA volume > 50 cm<sup>3)?</label><br>
+        <input type="radio" name="atrial_dilation" value="yes"> Yes
+        <input type="radio" name="atrial_dilation" value="no"> No
+        <input type="radio" name="atrial_dilation" value="unknown"> unknown
+      </div>    
+  
+      <div class="question">
+        <label>Echo (TTE or TEE): atrial hypertrophy?</label><br>
+        <input type="radio" name="atrial_hypertrophy" value="yes"> Yes
+        <input type="radio" name="atrial_hypertrophy" value="no"> No
+        <input type="radio" name="atrial_hypertrophy" value="unknown"> unknown
+      </div>    
+  
+      <div class="question">
+        <label>Physiology: tachycardia (heart rate > 100)?</label><br>
+        <input type="radio" name="tachycardia" value="yes"> Yes
+        <input type="radio" name="tachycardia" value="no"> No
+        <input type="radio" name="tachycardia" value="unknown"> unknown
+      </div>    
+  
+      <div class="question">
+        <label>Physiology: Heart rate variability?</label><br>
+        <input type="radio" name="Heart_rate_variability" value="yes"> Yes
+        <input type="radio" name="Heart_rate_variability" value="no"> No
+        <input type="radio" name="Heart_rate_variability" value="unknown"> unknown
+      </div>    
+  
+      <div class="question">
+        <label>Physiology: Fever? (>100.4°F or >38°C) </label><br>
+        <input type="radio" name="Fever" value="yes"> Yes
+        <input type="radio" name="Fever" value="no"> No
+        <input type="radio" name="Fever" value="unknown"> unknown
+      </div>    
+      
     </div>
-    <div class="question">
-      <label>Do you have a history of hypertension?</label><br>
-      <input type="radio" id="hypertension-yes" name="hypertension" value="yes">
-      <label for="hypertension-yes">Yes</label><br>
-      <input type="radio" id="hypertension-no" name="hypertension" value="no">
-      <label for="hypertension-no">No</label><br>
-      <input type="radio" id="hypertension-unknown" name="hypertension" value="unknown">
-      <label for="hypertension-unknown">Unknown</label>
-    </div>
-  </div>
-
-  <!-- Physiology Section -->
-  <div class="section physiology">
-    <h2>Physiology</h2>
-    <div class="question">
-      <label for="height">What is your height (cm)?</label><br>
-      <input type="number" id="height" name="height">
-    </div>
-    <div class="question">
-      <label for="weight">What is your weight (kg)?</label><br>
-      <input type="number" id="weight" name="weight">
-    </div>
-  </div>
-
+ </form>
 
 
 
