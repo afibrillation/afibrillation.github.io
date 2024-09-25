@@ -78,6 +78,8 @@ function runRiskCalculation() {
         resultsText += "Danny: High risk for new-onset atrial fibrillation!";
     }
 
+    b=
+
     // Display results
     document.querySelector('.result p').innerText = resultsText;
 }
