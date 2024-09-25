@@ -25,23 +25,48 @@
     </div>
 
     <div class="question">
+      <label>Age (years old) at CABG?</label><br>
+      <input type="radio" id="18 ≤ Age < 65" name="18 ≤ Age < 65" value=0>
+      <label for="18_≤_Age_<_65">0</label><br>
+
+      <input type="radio" id="65 ≤ Age < 75" name="65 ≤ Age < 75" value=1>
+      <label for="65_≤_Age_<_75">1</label><br>
+
+      <input type="radio" id="75 ≤ Age" name="75 ≤ Age" value=2>
+      <label for="75_≤_Age">2</label><br>
+    </div>
+
+    <div class="question">
+      <label>Past Medical History: Congestive heart failure (EF ≤ 40%)?</label><br>
+      <input type="radio" name="Congestive_heart_failure" value="yes"> Yes
+      <input type="radio" name="Congestive_heart_failure" value="no"> No
+    </div>
+    
+    <div class="question">
       <label>Past Medical History: dysplipidemia?</label><br>
       <input type="radio" name="dysplipidemia" value="yes"> Yes
       <input type="radio" name="dysplipidemia" value="no"> No
     </div>
-    
+
     <div class="question">
-      <label>Age (years old) at CABG?</label><br>
-      <input type="radio" id="18 ≤ Age < 65" name="18 ≤ Age < 65" value=0>
-      <label for="18 ≤ Age < 65">0</label><br>
-
-      <input type="radio" id="65 ≤ Age < 75" name="65 ≤ Age < 75" value=1>
-      <label for="65 ≤ Age < 75">1</label><br>
-
-      <input type="radio" id="75 ≤ Age" name="75 ≤ Age" value=2>
-      <label for="75 ≤ Age">2</label><br>
+      <label>Past Medical History: hypertension?</label><br>
+      <input type="radio" name="hypertension" value="yes"> Yes
+      <input type="radio" name="hypertension" value="no"> No
     </div>
 
+    <div class="question">
+      <label>Past Medical History: valvular heart disease?</label><br>
+      <input type="radio" name="valvular_heart_disease" value="yes"> Yes
+      <input type="radio" name="valvular_heart_disease" value="no"> No
+    </div>    
+
+    <div class="question">
+      <label>Echo (TTE or TEE): atrial dilation? (LA volume > 50 cm<sup>3?</label><br>
+      <input type="radio" name="atrial_dilation" value="yes"> Yes
+      <input type="radio" name="atrial_dilation" value="no"> No
+      <input type="radio" name="atrial_dilation" value="unknown"> unknown
+    </div>    
+    
     <button type="button" onclick="calculateRisk()">Calculate Risk</button>
   </form>
 
