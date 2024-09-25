@@ -181,6 +181,9 @@
 
     <button type="button" onclick="calculateRisk()">Calculate Risk</button>
   </form>
+
+  <!-- Ensure this is linked correctly -->
+  <script src="script.js"></script> 
   
   <script>
     // Function to allow de-selection of radio buttons
@@ -194,8 +197,12 @@
     });
 
     function calculateRisk() {
-      // Placeholder for risk calculation logic
-      alert('Risk calculation functionality is yet to be implemented.');
+      // Call the function defined in script.js
+      if (typeof runRiskCalculation === "function") {
+        runRiskCalculation(); // Call the function from script.js
+      } else {
+        alert('Risk calculation function not found in script.js.');
+      }
     }
   </script>
 
