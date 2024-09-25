@@ -58,15 +58,15 @@ function runRiskCalculation() {
     if (hasFever === 'yes') riskScore += 1;
 
     // Prepare the result message
-    resultsText = `Your calculated risk score is: ${riskScore}.`;
+    resultsText = `Your calculated risk score is: ${riskScore}.\n`;
 
     // Rationale based on risk score
     if (riskScore <= 3) {
-        resultsText += "\nDanny: Low risk for new-onset atrial fibrillation.";
+        resultsText += "Danny: Low risk for new-onset atrial fibrillation.";
     } else if (riskScore <= 6) {
-        resultsText += "\nDanny: Moderate risk for new-onset atrial fibrillation.";
+        resultsText += "Danny: Moderate risk for new-onset atrial fibrillation.";
     } else {
-        resultsText += "\nDanny: High risk for new-onset atrial fibrillation.";
+        resultsText += "Danny: High risk for new-onset atrial fibrillation.";
     }
 
     // Display results
