@@ -1,72 +1,59 @@
+// script.js
+
 function runRiskCalculation() {
-    let score = 0;
+    // Initialize risk score
+    let riskScore = 0;
+    let resultsText = "";
 
-    // Get the user's answers
-    const smokingStatus = document.querySelector('input[name="Male"]:checked');
-    const age = document.querySelector('input[name="18_≤_Age_<_65"]:checked') || 
-                document.querySelector('input[name="65_≤_Age_<_75"]:checked') || 
-                document.querySelector('input[name="75_≤_Age"]:checked');
-    const congestiveHeartFailure = document.querySelector('input[name="Congestive_heart_failure"]:checked');
-    const dyslipidemia = document.querySelector('input[name="dysplipidemia"]:checked');
-    const hypertension = document.querySelector('input[name="hypertension"]:checked');
-    const valvularHeartDisease = document.querySelector('input[name="valvular_heart_disease"]:checked');
-    const atrialDilation = document.querySelector('input[name="atrial_dilation"]:checked');
-    const atrialHypertrophy = document.querySelector('input[name="atrial_hypertrophy"]:checked');
-    const tachycardia = document.querySelector('input[name="tachycardia"]:checked');
-    const heartRateVariability = document.querySelector('input[name="Heart_rate_variability"]:checked');
-    const fever = document.querySelector('input[name="Fever"]:checked');
-
-    // Check if all questions are answered
-    if (!smokingStatus || !age || !congestiveHeartFailure || !dyslipidemia ||
-        !hypertension || !valvularHeartDisease || !atrialDilation || 
-        !atrialHypertrophy || !tachycardia || !heartRateVariability || !fever) {
-        document.querySelector('.result p').textContent = "Please answer all the questions.";
-        return;
-    }
-
-    // Calculate score based on responses
-    // Gender: Male
-    if (smokingStatus.value === 'yes') score += 2; // Modify as per scoring guidelines if needed
+    // Get demographic information
+    const age = document.querySelector('input[name="age"]:checked').value;
+    const gender = document.querySelector('input[name="Male"]:checked').value;
 
     // Age scoring
-    score += parseInt(age.value); // Age points are directly given as the value
+    riskScore += parseInt(age);
 
-    // Congestive heart failure
-    if (congestiveHeartFailure.value === 'yes') score += 2;
+    // Get past medical history
+    const hasCHF = document.querySelector('input[name="Congestive_heart_failure"]:checked').value;
+    const hasDyslipidemia = document.querySelector('input[name="dysplipidemia"]:checked').value;
+    const hasHypertension = document.querySelector('input[name="hypertension"]:checked').value;
+    const hasValvularHeartDisease = document.querySelector('input[name="valvular_heart_disease"]:checked').value;
 
-    // Dyslipidemia
-    if (dyslipidemia.value === 'yes') score += 1;
+    // Scoring for past medical history
+    if (hasCHF === 'yes') riskScore += 2;
+    if (hasDyslipidemia === 'yes') riskScore += 1;
+    if (hasHypertension === 'yes') riskScore += 1;
+    if (hasValvularHeartDisease === 'yes') riskScore += 1;
 
-    // Hypertension
-    if (hypertension.value === 'yes') score += 1;
+    // Get echo information
+    const hasAtrialDilation = document.querySelector('input[name="atrial_dilation"]:checked').value;
+    const hasAtrialHypertrophy = document.querySelector('input[name="atrial_hypertrophy"]:checked').value;
 
-    // Valvular heart disease
-    if (valvularHeartDisease.value === 'yes') score += 1;
+    // Scoring for echo results
+    if (hasAtrialDilation === 'yes') riskScore += 2;
+    if (hasAtrialHypertrophy === 'yes') riskScore += 2;
 
-    // Atrial dilation
-    if (atrialDilation.value === 'yes') score += 2;
+    // Get physiology information
+    const hasTachycardia = document.querySelector('input[name="tachycardia"]:checked').value;
+    const hasHeartRateVariability = document.querySelector('input[name="Heart_rate_variability"]:checked').value;
+    const hasFever = document.querySelector('input[name="Fever"]:checked').value;
 
-    // Atrial hypertrophy
-    if (atrialHypertrophy.value === 'yes') score += 1;
+    // Scoring for physiology
+    if (hasTachycardia === 'yes') riskScore += 2;
+    if (hasHeartRateVariability === 'yes') riskScore += 1;
+    if (hasFever === 'yes') riskScore += 1;
 
-    // Tachycardia
-    if (tachycardia.value === 'yes') score += 2;
+    // Prepare the result message
+    resultsText = `Your calculated risk score is: ${riskScore}.`;
 
-    // Heart rate variability
-    if (heartRateVariability.value === 'yes') score += 1;
-
-    // Fever
-    if (fever.value === 'yes') score += 1;
-
-    // Display the result based on score
-    let riskMessage;
-    if (score >= 8) {
-        riskMessage = "High risk of New-Onset Atrial Fibrillation.";
-    } else if (score >= 2) {
-        riskMessage = "Moderate risk of New-Onset Atrial Fibrillation.";
+    // Rationale based on risk score
+    if (riskScore <= 3) {
+        resultsText += " Low risk for new-onset atrial fibrillation.";
+    } else if (riskScore <= 6) {
+        resultsText += " Moderate risk for new-onset atrial fibrillation.";
     } else {
-        riskMessage = "Low risk of New-Onset Atrial Fibrillation.";
+        resultsText += " High risk for new-onset atrial fibrillation.";
     }
 
-    document.querySelector('.result p').textContent = `Your risk score is: ${score}. ${riskMessage}`;
+    // Display results
+    document.querySelector('.result p').innerText = resultsText;
 }
