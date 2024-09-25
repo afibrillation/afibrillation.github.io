@@ -92,8 +92,7 @@ function runRiskCalculation() {
     } else if (riskScore <= 6) {
         resultsText += "Danny: Moderate risk for new-onset atrial fibrillation!";
     } else {
-        resultsText += "Danny: High risk for new-onset atrial fibrillation!
-            It's important to consult with your healthcare team for a personalized plan.";
+        resultsText += "Danny: High risk for new-onset atrial fibrillation! It's important to consult with your healthcare team for a personalized plan.";
     }
 
     // Display results
