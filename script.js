@@ -62,7 +62,7 @@ function calculateRisk() {
     let riskMessage;
     if (score >= 8) {
         riskMessage = "High risk of New-Onset Atrial Fibrillation.";
-    } else if (score >= 5) {
+    } else if (score >= 2) {
         riskMessage = "Moderate risk of New-Onset Atrial Fibrillation.";
     } else {
         riskMessage = "Low risk of New-Onset Atrial Fibrillation.";
