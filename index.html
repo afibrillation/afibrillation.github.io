@@ -20,8 +20,14 @@
     .medical-history {
       background-color: #f5f5dc; /* Light beige background */
     }
+    .echo {
+      background-color: #f0fff0; /* Light green background */
+    }
     .physiology {
-      background-color: #e6ffe6; /* Light green background */
+      background-color: #e6ffe6; /* Very light green background */
+    }
+    .result {
+      background-color: #fff0f5; /* Light pink background */
     }
     .section h2 {
       margin-top: 0;
@@ -33,7 +39,7 @@
 </head>
 <body>
 
-  <form id="risk-time-form">   
+  <form id="risk-form">
     <h1>New-Onset Atrial Fibrillation Risk Calculator after CABG</h1>
   
     <!-- Demographic Section -->
@@ -93,7 +99,7 @@
     <div class="section physiology">
       <h2>Physiology</h2>
       <div class="question">
-        <label>Echo (TTE or TEE): atrial dilation? (LA volume > 50 cm<sup>3)?</label><br>
+        <label>Echo (TTE or TEE): atrial dilation? (LA volume > 50 cm<sup>3</sup>)?</label><br>
         <input type="radio" name="atrial_dilation" value="yes"> Yes
         <input type="radio" name="atrial_dilation" value="no"> No
         <input type="radio" name="atrial_dilation" value="unknown"> unknown
