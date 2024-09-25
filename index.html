@@ -190,8 +190,9 @@
       radio.addEventListener('click', function () {
         if (this.previousChecked && this.previousChecked === this) {
           this.checked = false; // De-select if clicked again
+        } else {
+          this.previousChecked = this; // Store the currently checked radio
         }
-        this.previousChecked = this; // Store the currently checked radio
       });
     });
 
