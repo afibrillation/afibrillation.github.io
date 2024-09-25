@@ -25,15 +25,24 @@ function runRiskCalculation() {
     const hasFever = document.querySelector('input[name="Fever"]:checked').value;
 
     // Check if all questions are answered
-    const allQuestionsAnswered = age && gender && hasCHF && hasDyslipidemia &&
-                                 hasHypertension && hasValvularHeartDisease &&
-                                 hasAtrialDilation && hasAtrialHypertrophy &&
-                                 hasTachycardia && hasHeartRateVariability && hasFever;
+    const allQuestionsAnswered = 
+        age !== undefined && age !== null && // Ensure age is provided
+        gender !== undefined && gender !== null && // Ensure gender is provided
+        hasCHF &&
+        hasDyslipidemia &&
+        hasHypertension &&
+        hasValvularHeartDisease &&
+        hasAtrialDilation &&
+        hasAtrialHypertrophy &&
+        hasTachycardia &&
+        hasHeartRateVariability &&
+        hasFever;
 
     if (!allQuestionsAnswered) {
-        document.getElementById('result').textContent = "Please answer all the questions.";
+        document.querySelector('.result p').innerText = "Please answer all the questions.";
         return; // Exit the function if not all questions are answered
     }
+
 
     // Risk calculation based on answers
     // Example scoring logic based on responses (you can modify as needed)
