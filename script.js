@@ -6,23 +6,41 @@ function runRiskCalculation() {
     let resultsText = "";
 
     // Get demographic information
-    const age = document.querySelector('input[name="age"]:checked').value;
-    const gender = document.querySelector('input[name="Male"]:checked').value;
-
+    const age = document.querySelector('input[name="age"]:checked') ? 
+                document.querySelector('input[name="age"]:checked').value : null;
+    
+    const gender = document.querySelector('input[name="Male"]:checked') ? 
+                   document.querySelector('input[name="Male"]:checked').value : null;
+    
     // Get past medical history
-    const hasCHF = document.querySelector('input[name="Congestive_heart_failure"]:checked').value;
-    const hasDyslipidemia = document.querySelector('input[name="dysplipidemia"]:checked').value;
-    const hasHypertension = document.querySelector('input[name="hypertension"]:checked').value;
-    const hasValvularHeartDisease = document.querySelector('input[name="valvular_heart_disease"]:checked').value;
-
+    const hasCHF = document.querySelector('input[name="Congestive_heart_failure"]:checked') ? 
+                    document.querySelector('input[name="Congestive_heart_failure"]:checked').value : null;
+    
+    const hasDyslipidemia = document.querySelector('input[name="dysplipidemia"]:checked') ? 
+                            document.querySelector('input[name="dysplipidemia"]:checked').value : null;
+    
+    const hasHypertension = document.querySelector('input[name="hypertension"]:checked') ? 
+                            document.querySelector('input[name="hypertension"]:checked').value : null;
+    
+    const hasValvularHeartDisease = document.querySelector('input[name="valvular_heart_disease"]:checked') ? 
+                                    document.querySelector('input[name="valvular_heart_disease"]:checked').value : null;
+    
     // Get echo information
-    const hasAtrialDilation = document.querySelector('input[name="atrial_dilation"]:checked').value;
-    const hasAtrialHypertrophy = document.querySelector('input[name="atrial_hypertrophy"]:checked').value;
-
+    const hasAtrialDilation = document.querySelector('input[name="atrial_dilation"]:checked') ? 
+                              document.querySelector('input[name="atrial_dilation"]:checked').value : null;
+    
+    const hasAtrialHypertrophy = document.querySelector('input[name="atrial_hypertrophy"]:checked') ? 
+                                 document.querySelector('input[name="atrial_hypertrophy"]:checked').value : null;
+    
     // Get physiology information
-    const hasTachycardia = document.querySelector('input[name="tachycardia"]:checked').value;
-    const hasHeartRateVariability = document.querySelector('input[name="Heart_rate_variability"]:checked').value;
-    const hasFever = document.querySelector('input[name="Fever"]:checked').value;
+    const hasTachycardia = document.querySelector('input[name="tachycardia"]:checked') ? 
+                           document.querySelector('input[name="tachycardia"]:checked').value : null;
+    
+    const hasHeartRateVariability = document.querySelector('input[name="Heart_rate_variability"]:checked') ? 
+                                   document.querySelector('input[name="Heart_rate_variability"]:checked').value : null;
+    
+    const hasFever = document.querySelector('input[name="Fever"]:checked') ? 
+                     document.querySelector('input[name="Fever"]:checked').value : null;
 
     // Check if all questions are answered
     const allQuestionsAnswered = 
