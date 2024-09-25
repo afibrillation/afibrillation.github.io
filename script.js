@@ -1,4 +1,4 @@
-function calculateRisk() {
+function runRiskCalculation() {
     let score = 0;
 
     // Get the user's answers
