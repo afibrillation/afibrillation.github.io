@@ -93,6 +93,8 @@ function runRiskCalculation() {
         resultsText += "Danny: Moderate risk for new-onset atrial fibrillation!\n";
     } else {
         resultsText += "Danny: High risk for new-onset atrial fibrillation!\n";
+        resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
+        resultsText += "However, Danny is very busy so please give more time for debugging :-) ";
     }
 
     // Display results
