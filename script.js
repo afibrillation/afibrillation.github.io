@@ -40,7 +40,7 @@ function runRiskCalculation() {
     
     // Age scoring
     riskScore += parseInt(age);
-    riskScore += parseInt(Male);
+    riskScore += parseInt(gender);
     
     // Scoring for past medical history
     if (hasCHF === 'yes') riskScore += 2;
