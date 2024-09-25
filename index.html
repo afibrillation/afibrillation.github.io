@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <h1>Disease Risk Calculator</h1>
+  <h1>New-Onset Atrial Fibrillation Risk Calculator after CABG</h1>
 
   <form id="risk-form">
     <div class="question">
@@ -29,8 +29,21 @@
       <input type="radio" name="family_history" value="yes"> Yes
       <input type="radio" name="family_history" value="no"> No
     </div>
+    
+    <div class="question">
+      <label>What is your favorite fruit?</label><br>
+      <input type="radio" id="apple" name="favorite_fruit" value="apple">
+      <label for="apple">Apple</label><br>
 
-    <!-- Add more questions as needed -->
+      <input type="radio" id="banana" name="favorite_fruit" value="banana">
+      <label for="banana">Banana</label><br>
+
+      <input type="radio" id="orange" name="favorite_fruit" value="orange">
+      <label for="orange">Orange</label><br>
+
+      <input type="radio" id="mango" name="favorite_fruit" value="mango">
+      <label for="mango">Mango</label><br>
+    </div>
 
     <button type="button" onclick="calculateRisk()">Calculate Risk</button>
   </form>
