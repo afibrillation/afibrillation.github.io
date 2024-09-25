@@ -11,6 +11,7 @@ function runRiskCalculation() {
 
     // Age scoring
     riskScore += parseInt(age);
+    riskScore += parseInt(Male);
 
     // Get past medical history
     const hasCHF = document.querySelector('input[name="Congestive_heart_failure"]:checked').value;
