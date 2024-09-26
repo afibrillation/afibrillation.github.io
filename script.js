@@ -87,11 +87,11 @@ function runRiskCalculation() {
     resultsText = `Your calculated risk score is: ${riskScore}.\n`;
 
     // Rationale based on risk score
-    if (riskScore <= 3) {
+    if (riskScore <= 4) {
         resultsText += "Low risk for new-onset atrial fibrillation!\n";
         resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
         resultsText += "However, Danny is very busy so please give more time for debugging :-) \n";
-    } else if (riskScore <= 6) {
+    } else if (riskScore <= 8) {
         resultsText += "Moderate risk for new-onset atrial fibrillation!\n";
         resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
         resultsText += "However, Danny is very busy so please give more time for debugging :-) \n";
