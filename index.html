@@ -73,7 +73,8 @@
       <p><strong>Contributors :</strong> (alphabetical order) Daniel Cole, MD, Jonathan Ho, MD, 
         Matt Fischer, MD, MS, Maxime Cannesson, MD, PhD (all @ Anesthesia and Perioperative medicine of UCLA)</p>
       <p><strong>Paper link: </strong> [click here] will be updated </p>
-      <p><strong>Date:</strong> Sep, 2024 </p>
+      <p><strong>Built Date:</strong> <span id="date"></span></p>
+      <p><strong>Built Time:</strong> <span id="time"></span></p>
     </div>
     
     <!-- Demographic Section -->
@@ -197,6 +198,23 @@
     //   });
     // });
     
+    function displayDateTime() {
+            const now = new Date();
+
+            // Format date
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = now.toLocaleDateString(undefined, options);
+            document.getElementById('date').textContent = formattedDate;
+
+            // Format time
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+    // Display date and time when the page loads
+    displayDateTime();
+
     function calculateRisk() {
       // Call the function defined in script.js
       if (typeof runRiskCalculation === "function") {
