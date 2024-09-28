@@ -10,6 +10,4 @@ Please visit below site:
   <p><strong>Contributors :</strong> (alphabetical order) Daniel Cole, MD, Jonathan Ho, MD, 
     Matt Fischer, MD, MS, Maxime Cannesson, MD, PhD (all @ Anesthesia and Perioperative medicine of UCLA)</p>
   <p><strong>Paper link: </strong> [click here] will be updated </p>
-  <p><strong>Built Date:</strong> <span id="date"></span></p>
-  <p><strong>Built Time:</strong> <span id="time"></span></p>
 </div>
