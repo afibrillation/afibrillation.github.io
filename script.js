@@ -88,17 +88,17 @@ function runRiskCalculation() {
 
     // Rationale based on risk score
     if (riskScore <= 4) {
-        resultsText += "Low risk for new-onset atrial fibrillation!\n";
-        resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
-        resultsText += "However, Danny is very busy so please give more time for debugging :-) \n";
+        resultsText += "Low risk for new-onset atrial fibrillation (possibility < 10%)\n";
+        resultsText += "We Will provide Amiodarone dose and its start/end time soon.\n";
+        resultsText += "Machine leanring algorithm still being built.\n";
     } else if (riskScore <= 8) {
         resultsText += "Moderate risk for new-onset atrial fibrillation!\n";
-        resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
-        resultsText += "However, Danny is very busy so please give more time for debugging :-) \n";
+        resultsText += "We Will provide Amiodarone dose and its start/end time soon.\n";
+        resultsText += "Machine leanring algorithm still being built.\n";
     } else {
         resultsText += "High risk for new-onset atrial fibrillation!\n";
-        resultsText += "Danny will let you know the Amiodarone dose and its start/end time.\n";
-        resultsText += "However, Danny is very busy so please give more time for debugging :-) \n";
+        resultsText += "We Will provide Amiodarone dose and its start/end time soon.\n";
+        resultsText += "Machine leanring algorithm still being built.\n";
     }
 
     // Display results
